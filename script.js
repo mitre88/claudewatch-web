@@ -447,25 +447,26 @@ function initScrollEffects() {
 }
 
 // ─── Intersection Observer for subtle animations ──────────────────────────────
+// Cards are always visible (opacity:1 in CSS). JS only adds a subtle lift
+// animation via a class — so if the observer never fires, cards still show.
 
 function initScrollReveal() {
+  if (!window.IntersectionObserver) return;
+
   const cards = document.querySelectorAll('.feature-card, .step, .screenshot-item');
-  if (!cards.length || !window.IntersectionObserver) return;
+  if (!cards.length) return;
 
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('revealed');
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
-  cards.forEach((card, i) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(16px)';
-    card.style.transition = `opacity 400ms ease ${i * 40}ms, transform 400ms ease ${i * 40}ms`;
+  cards.forEach(card => {
+    card.classList.add('reveal-ready');
     io.observe(card);
   });
 }
