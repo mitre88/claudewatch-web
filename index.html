@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClaudeWatch — Monitorea Claude Code desde tu iPhone</title>
+  <meta name="description" content="ClaudeWatch conecta tu Mac con tu iPhone via WiFi local. Monitorea sesiones de Claude Code en tiempo real, recibe notificaciones y mantén el control — sin nube, sin cuenta.">
+  <meta name="keywords" content="ClaudeWatch, Claude Code, iOS app, terminal monitor, iPhone, developer tool">
+  <meta property="og:title" content="ClaudeWatch — Monitorea Claude Code desde tu iPhone">
+  <meta property="og:description" content="Monitoreo local de sesiones de Claude Code. Sin nube, sin cuentas. Solo WiFi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://claudewatch.app">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── Navigation ─────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-icon">⌚</span>
+      <span>ClaudeWatch</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#features" data-i18n="nav_features">Funciones</a></li>
+      <li><a href="#howto" data-i18n="nav_howto">Cómo funciona</a></li>
+      <li><a href="privacy.html" data-i18n="nav_privacy">Privacidad</a></li>
+      <li><a href="support.html" data-i18n="nav_support">Soporte</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-switcher" role="group" aria-label="Language switcher">
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span data-i18n="hero_badge">Disponible para iPhone</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="app-name" data-i18n="hero_app_name">ClaudeWatch</span><br>
+            <span data-i18n="hero_title">Tu Mac. Vigilado desde tu iPhone.</span>
+          </h1>
+
+          <p class="hero-tagline" data-i18n="hero_tagline">
+            Monitorea tus sesiones de Claude Code en tiempo real desde tu iPhone. Recibe notificaciones, controla comandos y permanece al tanto — sin mirar la pantalla de tu Mac.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#" class="appstore-badge" aria-label="Download on App Store">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#F5F5F5"/>
+              </svg>
+              <span class="appstore-badge-text">
+                <span class="appstore-badge-sub" data-i18n="hero_cta_store_sub">Descarga en el</span>
+                <span class="appstore-badge-main" data-i18n="hero_cta_store">App Store</span>
+              </span>
+            </a>
+
+            <a href="#howto" class="btn-secondary" data-i18n="hero_cta_docs">
+              Ver documentación
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="hero-visual">
+          <div class="phone-mockup">
+            <div class="mock-dynamic-island">
+              <span class="mock-di-dot"></span>
+              <span data-i18n="mock_di_text">claude</span>
+            </div>
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="mock-header">
+                <span class="mock-title" data-i18n="mock_sessions">Sesiones activas</span>
+                <span class="mock-status">
+                  <span class="mock-status-dot"></span>
+                  <span data-i18n="mock_live">En vivo</span>
+                </span>
+              </div>
+
+              <div class="mock-session-card">
+                <div class="mock-session-title">claudewatch-web</div>
+                <div class="mock-session-line accent"></div>
+                <div class="mock-session-line medium"></div>
+                <div class="mock-session-line short"></div>
+              </div>
+
+              <div class="mock-session-card">
+                <div class="mock-session-title">iOS-app build</div>
+                <div class="mock-session-line medium"></div>
+                <div class="mock-session-line short"></div>
+              </div>
+
+              <div class="mock-usage-bar">
+                <span class="mock-usage-label" data-i18n="mock_tokens">Tokens</span>
+                <div class="mock-bar-track">
+                  <div class="mock-bar-fill"></div>
+                </div>
+                <span style="font-size:9px;color:var(--accent);">62%</span>
+              </div>
+
+              <div class="mock-usage-bar">
+                <span class="mock-usage-label">Cost</span>
+                <div class="mock-bar-track">
+                  <div class="mock-bar-fill" style="width:38%;background:rgba(255,154,31,0.5);"></div>
+                </div>
+                <span style="font-size:9px;color:var(--text-tertiary);">38%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Features ──────────────────────────────────── -->
+  <section class="section" id="features">
+    <div class="container">
+      <span class="section-label" data-i18n="features_label">Funciones principales</span>
+      <h2 class="section-title" data-i18n="features_title">Todo lo que necesitas a mano</h2>
+      <p class="section-subtitle" data-i18n="features_subtitle">
+        Diseñado para desarrolladores que usan Claude Code. Una conexión directa entre tu Mac y tu iPhone, sin servidores en la nube.
+      </p>
+
+      <div class="features-grid">
+
+        <!-- Featured: Terminal -->
+        <div class="feature-card featured">
+          <div class="feature-content">
+            <div class="feature-icon">⌨️</div>
+            <h3 data-i18n="feat_terminal_title">Terminal en tu bolsillo</h3>
+            <p data-i18n="feat_terminal_desc">Visualiza la salida del terminal con formato de código, colores y scroll. Como tener una ventana de Mac en tu iPhone.</p>
+          </div>
+          <div class="feature-visual" aria-hidden="true">
+            <div class="cmd-line" data-i18n="feat_terminal_cmd">$ claude --dangerously-skip-permissions</div>
+            <div class="cmd-output" data-i18n="feat_terminal_out1">✓ Sesión iniciada</div>
+            <div>  Reading files...</div>
+            <div class="cmd-output" data-i18n="feat_terminal_out2">Procesando...</div>
+            <div>  Writing style.css</div>
+            <div>  Writing index.html</div>
+            <div class="cmd-accent" data-i18n="feat_terminal_acc">→ 3 archivos modificados</div>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📡</div>
+          <h3 data-i18n="feat1_title">Monitoreo en tiempo real</h3>
+          <p data-i18n="feat1_desc">Ve el output de Claude Code directamente en tu iPhone. Cada línea del terminal, sincronizada al instante.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3 data-i18n="feat2_title">Notificaciones inteligentes</h3>
+          <p data-i18n="feat2_desc">Recibe alertas cuando una tarea finaliza, cuando Claude espera tu respuesta o cuando ocurre un error.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏝️</div>
+          <h3 data-i18n="feat3_title">Dynamic Island</h3>
+          <p data-i18n="feat3_desc">Seguimiento de sesiones activas en el Dynamic Island del iPhone 14 Pro y posteriores. Siempre visible.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📷</div>
+          <h3 data-i18n="feat4_title">Emparejamiento QR</h3>
+          <p data-i18n="feat4_desc">Escanea el código QR en tu Mac para emparejar en segundos. Sin configuración compleja.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📶</div>
+          <h3 data-i18n="feat5_title">Bonjour auto-discovery</h3>
+          <p data-i18n="feat5_desc">Tu iPhone detecta automáticamente el servidor en tu Mac usando Bonjour, como AirDrop.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 data-i18n="feat6_title">Sin cuenta. Sin nube.</h3>
+          <p data-i18n="feat6_desc">Conexión local directa sobre WiFi. Tus datos nunca salen de tu red.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ─── How it Works ──────────────────────────────── -->
+  <section class="section" id="howto">
+    <div class="container">
+      <span class="section-label" data-i18n="howto_label">Instalación</span>
+      <h2 class="section-title" data-i18n="howto_title">En marcha en 3 pasos</h2>
+      <p class="section-subtitle" data-i18n="howto_subtitle">
+        Sin configuración de servidores, sin cuentas, sin VPN. Solo WiFi local.
+      </p>
+
+      <div class="steps-container">
+
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3 data-i18n="step1_title">Instala el servidor en tu Mac</h3>
+            <p data-i18n="step1_desc">Un solo comando instala el servidor ligero que corre en segundo plano en tu Mac.</p>
+            <div class="install-command">
+              <code>bash &lt;(curl -sL https://claudewatch.app/install.sh)</code>
+              <button class="copy-btn" id="copy-btn" data-i18n="step1_copy" aria-label="Copy install command">
+                Copiar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3 data-i18n="step2_title">Escanea el código QR</h3>
+            <p data-i18n="step2_desc">Abre ClaudeWatch en tu iPhone y escanea el QR que aparece en tu Mac. El emparejamiento es automático.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3 data-i18n="step3_title">Monitorea desde tu iPhone</h3>
+            <p data-i18n="step3_desc">Tu iPhone se conecta a tu Mac por WiFi local. Ve las sesiones activas, recibe notificaciones y controla Claude Code.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ─── Privacy Banner ────────────────────────────── -->
+  <section class="section" id="privacy-section">
+    <div class="container">
+      <div class="privacy-banner">
+        <div class="privacy-icon" aria-hidden="true">🔐</div>
+        <div>
+          <span class="section-label" data-i18n="privacy_label">Privacidad</span>
+          <h2 class="section-title" style="font-size:1.8rem;" data-i18n="privacy_title">Tu privacidad, nuestra prioridad</h2>
+          <p data-i18n="privacy_p1">ClaudeWatch opera completamente en tu red local. No existe ningún servidor en la nube.</p>
+          <div class="privacy-points">
+            <div class="privacy-point">
+              <span class="privacy-point-icon" aria-hidden="true">✓</span>
+              <span data-i18n="priv1">Conexión solo por WiFi local</span>
+            </div>
+            <div class="privacy-point">
+              <span class="privacy-point-icon" aria-hidden="true">✓</span>
+              <span data-i18n="priv2">Sin servidores en la nube</span>
+            </div>
+            <div class="privacy-point">
+              <span class="privacy-point-icon" aria-hidden="true">✓</span>
+              <span data-i18n="priv3">Sin cuentas ni registro</span>
+            </div>
+            <div class="privacy-point">
+              <span class="privacy-point-icon" aria-hidden="true">✓</span>
+              <span data-i18n="priv4">Sin analytics ni rastreo</span>
+            </div>
+            <div class="privacy-point">
+              <span class="privacy-point-icon" aria-hidden="true">✓</span>
+              <span data-i18n="priv5">Cámara solo para escanear QR</span>
+            </div>
+            <div class="privacy-point">
+              <span class="privacy-point-icon" aria-hidden="true">✓</span>
+              <span data-i18n="priv6">Código abierto y auditable</span>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="privacy.html" class="btn-secondary" style="display:inline-flex;" data-i18n="footer_privacy">Política de Privacidad</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="/" class="footer-brand nav-logo" style="text-decoration:none;">
+            <span class="nav-logo-icon" aria-hidden="true">⌚</span>
+            <span>ClaudeWatch</span>
+          </a>
+          <span class="text-tertiary" style="font-size:0.85rem;" data-i18n="footer_tagline">Monitoreo local para Claude Code</span>
+        </div>
+
+        <div class="footer-center">
+          <p class="footer-copy" data-i18n="footer_copy">© 2025 ClaudeWatch. Todos los derechos reservados.</p>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-links">
+            <a href="privacy.html" data-i18n="footer_privacy">Política de Privacidad</a>
+            <a href="terms.html" data-i18n="footer_terms">Términos de Uso</a>
+            <a href="support.html" data-i18n="footer_support">Soporte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

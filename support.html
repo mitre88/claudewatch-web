@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte — ClaudeWatch</title>
+  <meta name="description" content="Soporte y preguntas frecuentes para ClaudeWatch. Soluciona problemas de conexión, QR, notificaciones y más.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── Navigation ─────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-icon">⌚</span>
+      <span>ClaudeWatch</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#features">Funciones</a></li>
+      <li><a href="/#howto">Cómo funciona</a></li>
+      <li><a href="privacy.html">Privacidad</a></li>
+      <li><a href="support.html">Soporte</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switcher" role="group" aria-label="Language switcher">
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ──────────────────────────────────────── -->
+  <div class="legal-hero">
+    <div class="container">
+      <span class="section-label">Help</span>
+      <h1>
+        <span class="support-es">Centro de Soporte</span>
+        <span class="support-en hidden">Support Center</span>
+        <span class="support-fr hidden">Centre de Support</span>
+      </h1>
+      <p style="color: var(--text-secondary); margin-top: 8px; font-size:1.05rem;">
+        <span class="support-es">¿Necesitas ayuda? Encuentra respuestas rápidas o contáctanos directamente.</span>
+        <span class="support-en hidden">Need help? Find quick answers or contact us directly.</span>
+        <span class="support-fr hidden">Besoin d'aide ? Trouvez des réponses rapides ou contactez-nous directement.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── Content ───────────────────────────────────── -->
+  <div class="legal-body">
+    <div class="container">
+
+      <!-- SPANISH SUPPORT -->
+      <div class="support-es">
+
+        <!-- FAQ -->
+        <h2 style="font-size:1.4rem; margin-bottom:4px; color:var(--text-primary);">Preguntas Frecuentes</h2>
+        <p style="color:var(--text-tertiary); font-size:0.88rem; margin-bottom: 0;">Toca una pregunta para ver la respuesta.</p>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿ClaudeWatch requiere una cuenta o suscripción?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              No. ClaudeWatch es una herramienta local que no requiere cuenta, registro ni suscripción. Descarga la app, instala el servidor en tu Mac con un comando y empareja. Eso es todo.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Mis datos salen de mi red local?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              No. ClaudeWatch establece una conexión directa entre tu iPhone y tu Mac dentro de tu red WiFi. No existe ningún servidor en la nube. Todo el tráfico de datos permanece en tu red local.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Qué versión de iOS se requiere?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              ClaudeWatch requiere iOS 16 o posterior. El Dynamic Island está disponible en iPhone 14 Pro, 14 Pro Max y todos los modelos posteriores con Dynamic Island.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Qué versión de macOS necesita el servidor?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              El servidor de ClaudeWatch es un script de shell compatible con macOS 12 Monterey y posterior. Requiere que tengas Claude Code instalado en tu Mac. El servidor se instala en ~/Library/Application Support/ClaudeWatch/ y puede configurarse para iniciarse automáticamente con tu Mac.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Puedo emparejar varios iPhones con el mismo Mac?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Actualmente ClaudeWatch admite un dispositivo iPhone emparejado por Mac a la vez. El soporte para múltiples dispositivos está planificado para una versión futura.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Funciona con VPN activa?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Depende del tipo de VPN. Las VPN que enrutan todo el tráfico a través de un servidor remoto pueden interferir con la conexión local. Si tienes problemas, intenta desactivar la VPN mientras usas ClaudeWatch, o usa una VPN con split-tunneling que excluya el tráfico local.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cómo desinstalo el servidor del Mac?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Para desinstalar el servidor, ejecuta en Terminal:<br><br>
+              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">bash &lt;(curl -sL https://claudewatch.app/uninstall.sh)</code><br><br>
+              Esto eliminará el servidor, el agente de LaunchAgent y todos los archivos de configuración.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Troubleshooting -->
+        <h2 style="font-size:1.4rem; margin-top:56px; margin-bottom:8px; color:var(--text-primary);">Resolución de Problemas</h2>
+        <p style="color:var(--text-tertiary); font-size:0.88rem;">Sigue estos pasos según el problema que experimentes.</p>
+
+        <div class="troubleshoot-grid">
+
+          <div class="troubleshoot-card">
+            <h4>🔍 El servidor no aparece en la app</h4>
+            <ul class="steps-list">
+              <li data-step="1">Verifica que tu iPhone y tu Mac estén en la misma red WiFi.</li>
+              <li data-step="2">Confirma que el servidor está corriendo: abre Terminal y escribe <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch status</code>.</li>
+              <li data-step="3">Si el servidor está detenido, inícialo con <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch start</code>.</li>
+              <li data-step="4">Revisa que el firewall de tu Mac no esté bloqueando el puerto 8765 (Preferencias del Sistema > Seguridad y Privacidad > Firewall).</li>
+              <li data-step="5">Reinicia la búsqueda en la app arrastrando hacia abajo en la lista de dispositivos.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>📡 La conexión se pierde frecuentemente</h4>
+            <ul class="steps-list">
+              <li data-step="1">Asegúrate de que tu Mac no entre en modo de suspensión mientras usas la app (Ajustes del Sistema > Batería > Evitar suspensión).</li>
+              <li data-step="2">Verifica que la señal WiFi sea estable en ambos dispositivos.</li>
+              <li data-step="3">Si usas una red con bandas 2.4GHz y 5GHz separadas, conecta ambos dispositivos a la misma banda.</li>
+              <li data-step="4">Reinicia el servidor: <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch restart</code> en Terminal.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>📷 El código QR no se escanea</h4>
+            <ul class="steps-list">
+              <li data-step="1">Verifica que hayas concedido permisos de cámara a ClaudeWatch en Ajustes > ClaudeWatch > Cámara.</li>
+              <li data-step="2">Asegúrate de que haya buena iluminación y que el QR esté completamente visible en el visor.</li>
+              <li data-step="3">Intenta limpiar la pantalla de tu Mac y alejar ligeramente el iPhone.</li>
+              <li data-step="4">Como alternativa, usa la opción "Ingresar IP manualmente" en la pantalla de emparejamiento.</li>
+              <li data-step="5">Si el QR expiró (más de 5 minutos), regenera uno nuevo con <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch qr</code>.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>🔔 No recibo notificaciones</h4>
+            <ul class="steps-list">
+              <li data-step="1">Ve a Ajustes > Notificaciones > ClaudeWatch y asegúrate de que las notificaciones estén habilitadas.</li>
+              <li data-step="2">Verifica que No Molestar o Enfoque no estén silenciando las notificaciones de ClaudeWatch.</li>
+              <li data-step="3">En la app, revisa Ajustes > Notificaciones y asegúrate de que los tipos de alerta deseados estén activados.</li>
+              <li data-step="4">Fuerza el cierre de la app y vuelve a abrirla para restablecer la conexión WebSocket.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>⚡ El servidor no inicia al encender el Mac</h4>
+            <ul class="steps-list">
+              <li data-step="1">Ejecuta <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch install-launchagent</code> para instalar el inicio automático.</li>
+              <li data-step="2">Verifica que el agente esté registrado: <code style="font-family:var(--font-mono);font-size:0.82em;">launchctl list | grep claudewatch</code>.</li>
+              <li data-step="3">Si ves un código de error diferente a 0, revisa los logs en <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/Logs/ClaudeWatch/</code>.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>🔄 La app muestra datos desactualizados</h4>
+            <ul class="steps-list">
+              <li data-step="1">Arrastra hacia abajo en la pantalla principal para forzar una actualización.</li>
+              <li data-step="2">Verifica el indicador de estado en la esquina superior derecha — un punto rojo indica desconexión.</li>
+              <li data-step="3">Si el indicador es verde pero los datos no se actualizan, toca el ícono de reconexión.</li>
+              <li data-step="4">Reinicia tanto la app como el servidor y vuelve a conectar.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Contact -->
+        <h2 style="font-size:1.4rem; margin-top:56px; margin-bottom:8px; color:var(--text-primary);">Contacto</h2>
+        <p style="color:var(--text-secondary); font-size:0.92rem;">Si los pasos anteriores no resuelven el problema, contáctanos. Respondemos en 24-48 horas hábiles.</p>
+
+        <div class="contact-card">
+          <span class="contact-icon" aria-hidden="true">✉️</span>
+          <div>
+            <h3 style="margin-bottom:8px;">Soporte por correo</h3>
+            <p style="font-size:0.92rem; margin-bottom:12px;">Para bugs, preguntas técnicas o sugerencias:</p>
+            <a href="mailto:support@claudewatch.app" class="btn-primary" style="display:inline-flex;">support@claudewatch.app</a>
+          </div>
+        </div>
+
+        <div class="contact-card" style="margin-top:16px;">
+          <span class="contact-icon" aria-hidden="true">🐙</span>
+          <div>
+            <h3 style="margin-bottom:8px;">GitHub Issues</h3>
+            <p style="font-size:0.92rem; margin-bottom:12px;">Para reportar bugs o solicitar funciones, abre un issue en GitHub:</p>
+            <a href="https://github.com/mitre88/claudewatch/issues" target="_blank" rel="noopener" class="btn-secondary" style="display:inline-flex;">Abrir un Issue</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ENGLISH SUPPORT -->
+      <div class="support-en hidden">
+
+        <h2 style="font-size:1.4rem; margin-bottom:4px; color:var(--text-primary);">Frequently Asked Questions</h2>
+        <p style="color:var(--text-tertiary); font-size:0.88rem; margin-bottom: 0;">Tap a question to see the answer.</p>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Does ClaudeWatch require an account or subscription?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              No. ClaudeWatch is a local tool that requires no account, registration, or subscription. Download the app, install the server on your Mac with one command, and pair. That's it.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Does my data leave my local network?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              No. ClaudeWatch establishes a direct connection between your iPhone and your Mac within your WiFi network. There is no cloud server. All data traffic remains on your local network.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What iOS version is required?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              ClaudeWatch requires iOS 16 or later. The Dynamic Island feature is available on iPhone 14 Pro, 14 Pro Max, and all subsequent models with a Dynamic Island.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              What macOS version does the server need?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              The ClaudeWatch server is a shell script compatible with macOS 12 Monterey and later. It requires Claude Code to be installed on your Mac. The server installs into ~/Library/Application Support/ClaudeWatch/ and can be configured to start automatically with your Mac.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I pair multiple iPhones with the same Mac?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Currently ClaudeWatch supports one paired iPhone per Mac at a time. Support for multiple devices is planned for a future release.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Does it work with VPN active?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              It depends on the VPN type. VPNs that route all traffic through a remote server can interfere with the local connection. If you experience issues, try disabling the VPN while using ClaudeWatch, or use a split-tunneling VPN that excludes local traffic.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I uninstall the Mac server?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              To uninstall the server, run in Terminal:<br><br>
+              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">bash &lt;(curl -sL https://claudewatch.app/uninstall.sh)</code><br><br>
+              This will remove the server, the LaunchAgent, and all configuration files.
+            </div>
+          </div>
+
+        </div>
+
+        <h2 style="font-size:1.4rem; margin-top:56px; margin-bottom:8px; color:var(--text-primary);">Troubleshooting</h2>
+        <p style="color:var(--text-tertiary); font-size:0.88rem;">Follow these steps based on the issue you're experiencing.</p>
+
+        <div class="troubleshoot-grid">
+
+          <div class="troubleshoot-card">
+            <h4>🔍 Server not appearing in app</h4>
+            <ul class="steps-list">
+              <li data-step="1">Verify your iPhone and Mac are on the same WiFi network.</li>
+              <li data-step="2">Confirm the server is running: open Terminal and type <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch status</code>.</li>
+              <li data-step="3">If the server is stopped, start it with <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch start</code>.</li>
+              <li data-step="4">Check that your Mac's firewall isn't blocking port 8765 (System Preferences > Security & Privacy > Firewall).</li>
+              <li data-step="5">Restart the search in the app by pulling down on the device list.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>📡 Connection drops frequently</h4>
+            <ul class="steps-list">
+              <li data-step="1">Make sure your Mac doesn't sleep while using the app (System Settings > Battery > Prevent sleep).</li>
+              <li data-step="2">Verify the WiFi signal is stable on both devices.</li>
+              <li data-step="3">If using a network with separate 2.4GHz and 5GHz bands, connect both devices to the same band.</li>
+              <li data-step="4">Restart the server: <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch restart</code> in Terminal.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>📷 QR code won't scan</h4>
+            <ul class="steps-list">
+              <li data-step="1">Check that you've granted camera permission to ClaudeWatch in Settings > ClaudeWatch > Camera.</li>
+              <li data-step="2">Make sure there is good lighting and the QR is fully visible in the viewfinder.</li>
+              <li data-step="3">Try cleaning your Mac screen and holding the iPhone slightly further away.</li>
+              <li data-step="4">As an alternative, use the "Enter IP manually" option on the pairing screen.</li>
+              <li data-step="5">If the QR has expired (older than 5 minutes), regenerate one with <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch qr</code>.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>🔔 Not receiving notifications</h4>
+            <ul class="steps-list">
+              <li data-step="1">Go to Settings > Notifications > ClaudeWatch and make sure notifications are enabled.</li>
+              <li data-step="2">Check that Focus or Do Not Disturb modes aren't silencing ClaudeWatch notifications.</li>
+              <li data-step="3">In the app, check Settings > Notifications and make sure desired alert types are toggled on.</li>
+              <li data-step="4">Force-quit the app and reopen it to reestablish the WebSocket connection.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>⚡ Server doesn't start on Mac boot</h4>
+            <ul class="steps-list">
+              <li data-step="1">Run <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch install-launchagent</code> to install auto-start.</li>
+              <li data-step="2">Verify the agent is registered: <code style="font-family:var(--font-mono);font-size:0.82em;">launchctl list | grep claudewatch</code>.</li>
+              <li data-step="3">If you see an error code other than 0, check logs at <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/Logs/ClaudeWatch/</code>.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>🔄 App shows stale data</h4>
+            <ul class="steps-list">
+              <li data-step="1">Pull down on the main screen to force a refresh.</li>
+              <li data-step="2">Check the status indicator in the top right — a red dot means disconnected.</li>
+              <li data-step="3">If the indicator is green but data isn't updating, tap the reconnect icon.</li>
+              <li data-step="4">Restart both the app and the server and reconnect.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2 style="font-size:1.4rem; margin-top:56px; margin-bottom:8px; color:var(--text-primary);">Contact</h2>
+        <p style="color:var(--text-secondary); font-size:0.92rem;">If the steps above don't resolve your issue, reach out. We respond within 24-48 business hours.</p>
+
+        <div class="contact-card">
+          <span class="contact-icon" aria-hidden="true">✉️</span>
+          <div>
+            <h3 style="margin-bottom:8px;">Email Support</h3>
+            <p style="font-size:0.92rem; margin-bottom:12px;">For bugs, technical questions, or suggestions:</p>
+            <a href="mailto:support@claudewatch.app" class="btn-primary" style="display:inline-flex;">support@claudewatch.app</a>
+          </div>
+        </div>
+
+        <div class="contact-card" style="margin-top:16px;">
+          <span class="contact-icon" aria-hidden="true">🐙</span>
+          <div>
+            <h3 style="margin-bottom:8px;">GitHub Issues</h3>
+            <p style="font-size:0.92rem; margin-bottom:12px;">To report bugs or request features, open an issue on GitHub:</p>
+            <a href="https://github.com/mitre88/claudewatch/issues" target="_blank" rel="noopener" class="btn-secondary" style="display:inline-flex;">Open an Issue</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FRENCH SUPPORT -->
+      <div class="support-fr hidden">
+
+        <h2 style="font-size:1.4rem; margin-bottom:4px; color:var(--text-primary);">Questions Fréquentes</h2>
+        <p style="color:var(--text-tertiary); font-size:0.88rem; margin-bottom: 0;">Touchez une question pour voir la réponse.</p>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ClaudeWatch nécessite-t-il un compte ou un abonnement ?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Non. ClaudeWatch est un outil local qui ne nécessite ni compte, ni inscription, ni abonnement. Téléchargez l'application, installez le serveur sur votre Mac avec une commande et associez. C'est tout.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Mes données quittent-elles mon réseau local ?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Non. ClaudeWatch établit une connexion directe entre votre iPhone et votre Mac au sein de votre réseau WiFi. Il n'existe pas de serveur cloud. Tout le trafic de données reste sur votre réseau local.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Quelle version d'iOS est requise ?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              ClaudeWatch nécessite iOS 16 ou ultérieur. La fonctionnalité Dynamic Island est disponible sur l'iPhone 14 Pro, 14 Pro Max et tous les modèles ultérieurs dotés d'un Dynamic Island.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Quelle version de macOS le serveur nécessite-t-il ?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Le serveur ClaudeWatch est un script shell compatible avec macOS 12 Monterey et ultérieur. Il nécessite que Claude Code soit installé sur votre Mac. Le serveur s'installe dans ~/Library/Application Support/ClaudeWatch/ et peut être configuré pour démarrer automatiquement avec votre Mac.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Puis-je associer plusieurs iPhone avec le même Mac ?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Actuellement, ClaudeWatch prend en charge un iPhone jumelé par Mac à la fois. Le support pour plusieurs appareils est prévu pour une version future.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Fonctionne-t-il avec un VPN actif ?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Cela dépend du type de VPN. Les VPN qui acheminent tout le trafic via un serveur distant peuvent interférer avec la connexion locale. Si vous rencontrez des problèmes, essayez de désactiver le VPN pendant l'utilisation de ClaudeWatch, ou utilisez un VPN avec split-tunneling qui exclut le trafic local.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Comment désinstaller le serveur Mac ?
+              <span class="faq-chevron" aria-hidden="true">⌄</span>
+            </button>
+            <div class="faq-answer">
+              Pour désinstaller le serveur, exécutez dans Terminal :<br><br>
+              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">bash &lt;(curl -sL https://claudewatch.app/uninstall.sh)</code><br><br>
+              Cela supprimera le serveur, le LaunchAgent et tous les fichiers de configuration.
+            </div>
+          </div>
+
+        </div>
+
+        <h2 style="font-size:1.4rem; margin-top:56px; margin-bottom:8px; color:var(--text-primary);">Résolution de Problèmes</h2>
+        <p style="color:var(--text-tertiary); font-size:0.88rem;">Suivez ces étapes selon le problème que vous rencontrez.</p>
+
+        <div class="troubleshoot-grid">
+
+          <div class="troubleshoot-card">
+            <h4>🔍 Le serveur n'apparaît pas</h4>
+            <ul class="steps-list">
+              <li data-step="1">Vérifiez que votre iPhone et votre Mac sont sur le même réseau WiFi.</li>
+              <li data-step="2">Confirmez que le serveur fonctionne : ouvrez Terminal et tapez <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch status</code>.</li>
+              <li data-step="3">Si le serveur est arrêté, démarrez-le avec <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch start</code>.</li>
+              <li data-step="4">Vérifiez que le pare-feu de votre Mac ne bloque pas le port 8765.</li>
+              <li data-step="5">Relancez la recherche dans l'application en tirant vers le bas.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>📡 La connexion se perd souvent</h4>
+            <ul class="steps-list">
+              <li data-step="1">Assurez-vous que votre Mac ne se met pas en veille (Réglages Système > Batterie > Empêcher la veille).</li>
+              <li data-step="2">Vérifiez que le signal WiFi est stable sur les deux appareils.</li>
+              <li data-step="3">Connectez les deux appareils à la même bande (2.4GHz ou 5GHz).</li>
+              <li data-step="4">Redémarrez le serveur : <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch restart</code>.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>📷 Le code QR ne se scanne pas</h4>
+            <ul class="steps-list">
+              <li data-step="1">Vérifiez que vous avez accordé la permission d'accès à la caméra dans Réglages > ClaudeWatch > Caméra.</li>
+              <li data-step="2">Assurez-vous d'une bonne luminosité et que le QR est entièrement visible.</li>
+              <li data-step="3">Nettoyez l'écran de votre Mac et éloignez légèrement l'iPhone.</li>
+              <li data-step="4">Utilisez l'option "Saisir l'IP manuellement" sur l'écran de jumelage.</li>
+              <li data-step="5">Régénérez un nouveau QR avec <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch qr</code>.</li>
+            </ul>
+          </div>
+
+          <div class="troubleshoot-card">
+            <h4>🔔 Pas de notifications</h4>
+            <ul class="steps-list">
+              <li data-step="1">Allez dans Réglages > Notifications > ClaudeWatch et activez les notifications.</li>
+              <li data-step="2">Vérifiez que Concentration ou Ne pas déranger ne silencient pas ClaudeWatch.</li>
+              <li data-step="3">Dans l'application, vérifiez Réglages > Notifications et activez les types d'alertes souhaités.</li>
+              <li data-step="4">Forcez la fermeture de l'app et rouvrez-la.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <h2 style="font-size:1.4rem; margin-top:56px; margin-bottom:8px; color:var(--text-primary);">Contact</h2>
+        <p style="color:var(--text-secondary); font-size:0.92rem;">Si les étapes ci-dessus ne résolvent pas votre problème, contactez-nous. Nous répondons sous 24 à 48 heures ouvrables.</p>
+
+        <div class="contact-card">
+          <span class="contact-icon" aria-hidden="true">✉️</span>
+          <div>
+            <h3 style="margin-bottom:8px;">Support par e-mail</h3>
+            <p style="font-size:0.92rem; margin-bottom:12px;">Pour les bugs, questions techniques ou suggestions :</p>
+            <a href="mailto:support@claudewatch.app" class="btn-primary" style="display:inline-flex;">support@claudewatch.app</a>
+          </div>
+        </div>
+
+        <div class="contact-card" style="margin-top:16px;">
+          <span class="contact-icon" aria-hidden="true">🐙</span>
+          <div>
+            <h3 style="margin-bottom:8px;">GitHub Issues</h3>
+            <p style="font-size:0.92rem; margin-bottom:12px;">Pour signaler des bugs ou demander des fonctionnalités :</p>
+            <a href="https://github.com/mitre88/claudewatch/issues" target="_blank" rel="noopener" class="btn-secondary" style="display:inline-flex;">Ouvrir un Issue</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── Footer ────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="/" class="footer-brand nav-logo" style="text-decoration:none;">
+            <span class="nav-logo-icon">⌚</span>
+            <span>ClaudeWatch</span>
+          </a>
+        </div>
+        <div class="footer-center">
+          <p class="footer-copy">© 2025 ClaudeWatch. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="support.html">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function applySupportLang(lang) {
+      const blocks = ['es', 'en', 'fr'];
+      blocks.forEach(l => {
+        document.querySelectorAll('.support-' + l).forEach(el => {
+          el.classList.toggle('hidden', l !== lang);
+        });
+      });
+      // Re-init FAQ for newly visible items
+      initFAQ && initFAQ();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('cw_lang') || 'es';
+      applySupportLang(savedLang);
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          applySupportLang(btn.dataset.lang);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

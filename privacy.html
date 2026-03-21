@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — ClaudeWatch</title>
+  <meta name="description" content="Política de privacidad de ClaudeWatch. La app funciona completamente en tu red local. No recopilamos datos personales.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ─── Navigation ─────────────────────────────────── -->
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-icon">⌚</span>
+      <span>ClaudeWatch</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/#features">Funciones</a></li>
+      <li><a href="/#howto">Cómo funciona</a></li>
+      <li><a href="privacy.html">Privacidad</a></li>
+      <li><a href="support.html">Soporte</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switcher" role="group" aria-label="Language switcher">
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── Legal Hero ────────────────────────────────── -->
+  <div class="legal-hero">
+    <div class="container">
+      <span class="section-label">Legal</span>
+      <h1>
+        <span class="legal-es">Política de Privacidad</span>
+        <span class="legal-en hidden">Privacy Policy</span>
+        <span class="legal-fr hidden">Politique de Confidentialité</span>
+      </h1>
+      <p class="legal-date">
+        <span class="legal-es">Última actualización: 21 de marzo de 2025</span>
+        <span class="legal-en hidden">Last updated: March 21, 2025</span>
+        <span class="legal-fr hidden">Dernière mise à jour : 21 mars 2025</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── Privacy Content ───────────────────────────── -->
+  <div class="legal-body">
+    <div class="container">
+
+      <!-- SPANISH -->
+      <div class="legal-content legal-es">
+        <h2>1. Información General</h2>
+        <p>ClaudeWatch ("la Aplicación", "nosotros", "nuestro") es una aplicación iOS que permite a los usuarios monitorear sesiones de Claude Code en sus Mac desde su iPhone mediante una conexión de red local (WiFi). Esta Política de Privacidad describe cómo la Aplicación trata la información del usuario.</p>
+        <p><strong>Resumen ejecutivo:</strong> ClaudeWatch no recopila, almacena, transmite ni vende ningún dato personal. La aplicación opera exclusivamente sobre tu red local y ningún dato sale de tu dispositivo o red doméstica.</p>
+
+        <h2>2. Datos que NO Recopilamos</h2>
+        <p>ClaudeWatch <strong>no recopila</strong> ninguno de los siguientes tipos de información:</p>
+        <ul>
+          <li>Nombre, dirección de correo electrónico u otra información de identificación personal</li>
+          <li>Datos de uso, estadísticas de sesión o métricas de comportamiento</li>
+          <li>Información del dispositivo (modelo, versión del sistema operativo, identificadores de dispositivo)</li>
+          <li>Datos de ubicación (GPS u otra geolocalización)</li>
+          <li>Contenido de las sesiones de Claude Code (comandos, respuestas, código fuente)</li>
+          <li>Datos financieros, de salud o de cualquier otra categoría sensible</li>
+          <li>Registros de diagnóstico o informes de fallos enviados a servidores externos</li>
+        </ul>
+
+        <h2>3. Cómo Funciona la Conexión</h2>
+        <p>ClaudeWatch establece una conexión directa entre tu iPhone y tu Mac utilizando exclusivamente tu red WiFi local:</p>
+        <ul>
+          <li><strong>Descubrimiento local (Bonjour):</strong> La app utiliza el protocolo Bonjour (mDNS/DNS-SD) de Apple para descubrir el servidor en tu Mac dentro de la misma red local. Este protocolo opera íntegramente dentro de tu red doméstica o de trabajo.</li>
+          <li><strong>Emparejamiento QR:</strong> El código QR que se escanea contiene únicamente la dirección IP local y el puerto de tu Mac dentro de tu red. Esta información nunca se envía a servidores externos.</li>
+          <li><strong>Transferencia de datos:</strong> Toda la comunicación entre la app y el servidor ocurre directamente entre los dos dispositivos, sobre WiFi local. No existe un servidor intermediario en la nube.</li>
+        </ul>
+
+        <h2>4. Permisos de la Aplicación</h2>
+        <p>ClaudeWatch solicita los siguientes permisos del sistema:</p>
+        <ul>
+          <li><strong>Cámara:</strong> Utilizada exclusivamente para escanear el código QR de emparejamiento. La aplicación no accede a la cámara en ningún otro contexto. Las imágenes capturadas no se almacenan ni transmiten.</li>
+          <li><strong>Red local:</strong> Necesario para que la app pueda descubrir y conectarse al servidor en tu Mac dentro de la misma red WiFi.</li>
+          <li><strong>Notificaciones push:</strong> Opcionales. Permiten recibir alertas locales cuando cambia el estado de una sesión de Claude Code. Las notificaciones se generan localmente y no pasan por servidores externos.</li>
+        </ul>
+
+        <h2>5. Almacenamiento de Datos en el Dispositivo</h2>
+        <p>La Aplicación puede almacenar localmente en tu iPhone:</p>
+        <ul>
+          <li>La dirección IP y puerto de tu Mac emparejada (para reconexión automática)</li>
+          <li>Preferencias de la aplicación (idioma, configuración de notificaciones)</li>
+          <li>Historial reciente de sesiones en caché local (solo en memoria durante el uso)</li>
+        </ul>
+        <p>Estos datos se almacenan en el almacenamiento seguro del dispositivo (iOS Keychain para credenciales de emparejamiento, UserDefaults para preferencias) y nunca se transmiten fuera del dispositivo.</p>
+
+        <h2>6. Servicios de Terceros</h2>
+        <p>ClaudeWatch <strong>no integra</strong> ningún SDK de análisis, publicidad, rastreo o servicios de terceros. La Aplicación no utiliza:</p>
+        <ul>
+          <li>Google Analytics, Firebase, Mixpanel, Amplitude u otros servicios de análisis</li>
+          <li>Redes publicitarias</li>
+          <li>SDKs de redes sociales</li>
+          <li>Servicios de informes de fallos externos (como Crashlytics o Sentry)</li>
+          <li>Herramientas de mapeo de calor o grabación de sesión</li>
+        </ul>
+
+        <h2>7. Menores de Edad</h2>
+        <p>ClaudeWatch es una herramienta técnica diseñada para desarrolladores de software. No está dirigida a menores de 13 años. Dado que la Aplicación no recopila ningún dato personal, no existe riesgo de recopilación inadvertida de datos de menores.</p>
+
+        <h2>8. Transferencias Internacionales de Datos</h2>
+        <p>Dado que ClaudeWatch no recopila ni transmite datos a ningún servidor externo, no aplican transferencias internacionales de datos. Toda la información permanece en tus dispositivos y en tu red local.</p>
+
+        <h2>9. Seguridad</h2>
+        <p>Si bien ClaudeWatch no transmite datos a servidores externos, recomendamos las siguientes buenas prácticas:</p>
+        <ul>
+          <li>Usar solo tu red WiFi doméstica o de trabajo de confianza para el emparejamiento</li>
+          <li>No utilizar la aplicación en redes WiFi públicas o no seguras</li>
+          <li>Mantener tanto la aplicación iOS como el servidor macOS actualizados</li>
+        </ul>
+
+        <h2>10. Tus Derechos</h2>
+        <p>Dado que ClaudeWatch no recopila datos personales, no existen datos que solicitar, corregir o eliminar de nuestra parte. Los únicos datos asociados a la app son los que se almacenan localmente en tu dispositivo, sobre los cuales tienes control total:</p>
+        <ul>
+          <li><strong>Eliminar datos locales:</strong> Desinstalar la aplicación elimina todos los datos locales almacenados.</li>
+          <li><strong>Revocar permisos:</strong> Puedes revocar los permisos de cámara, red local y notificaciones en cualquier momento desde Ajustes > ClaudeWatch en tu iPhone.</li>
+        </ul>
+
+        <h2>11. Cambios en esta Política</h2>
+        <p>Cualquier cambio material en esta Política de Privacidad se reflejará en la fecha de "Última actualización" en la parte superior de este documento. Te recomendamos revisar periódicamente esta página. El uso continuado de la Aplicación tras la publicación de cambios constituye tu aceptación de los mismos.</p>
+
+        <h2>12. Contacto</h2>
+        <p>Si tienes preguntas sobre esta Política de Privacidad, puedes contactarnos en:</p>
+        <ul>
+          <li><strong>Correo electrónico:</strong> <a href="mailto:privacy@claudewatch.app">privacy@claudewatch.app</a></li>
+          <li><strong>Soporte general:</strong> <a href="mailto:support@claudewatch.app">support@claudewatch.app</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/mitre88/claudewatch" target="_blank" rel="noopener">github.com/mitre88/claudewatch</a></li>
+        </ul>
+      </div>
+
+      <!-- ENGLISH -->
+      <div class="legal-content legal-en hidden">
+        <h2>1. Overview</h2>
+        <p>ClaudeWatch ("the App", "we", "our") is an iOS application that lets users monitor Claude Code sessions on their Mac from their iPhone using a local network (WiFi) connection. This Privacy Policy describes how the App handles user information.</p>
+        <p><strong>Executive summary:</strong> ClaudeWatch does not collect, store, transmit, or sell any personal data. The App operates exclusively on your local network and no data leaves your device or home network.</p>
+
+        <h2>2. Data We Do NOT Collect</h2>
+        <p>ClaudeWatch <strong>does not collect</strong> any of the following:</p>
+        <ul>
+          <li>Name, email address, or any other personally identifying information</li>
+          <li>Usage data, session statistics, or behavioral metrics</li>
+          <li>Device information (model, OS version, device identifiers)</li>
+          <li>Location data (GPS or other geolocation)</li>
+          <li>Content of Claude Code sessions (commands, responses, source code)</li>
+          <li>Financial, health, or other sensitive category data</li>
+          <li>Diagnostic logs or crash reports sent to external servers</li>
+        </ul>
+
+        <h2>3. How the Connection Works</h2>
+        <p>ClaudeWatch establishes a direct connection between your iPhone and your Mac using exclusively your local WiFi network:</p>
+        <ul>
+          <li><strong>Local discovery (Bonjour):</strong> The app uses Apple's Bonjour (mDNS/DNS-SD) protocol to discover the server on your Mac within the same local network. This protocol operates entirely within your home or work network.</li>
+          <li><strong>QR pairing:</strong> The QR code you scan contains only the local IP address and port of your Mac within your network. This information is never sent to external servers.</li>
+          <li><strong>Data transfer:</strong> All communication between the app and server happens directly between the two devices over local WiFi. There is no intermediary cloud server.</li>
+        </ul>
+
+        <h2>4. App Permissions</h2>
+        <p>ClaudeWatch requests the following system permissions:</p>
+        <ul>
+          <li><strong>Camera:</strong> Used exclusively to scan the pairing QR code. The app does not access the camera in any other context. Captured images are not stored or transmitted.</li>
+          <li><strong>Local Network:</strong> Required for the app to discover and connect to the server on your Mac within the same WiFi network.</li>
+          <li><strong>Push Notifications:</strong> Optional. Allow you to receive local alerts when the status of a Claude Code session changes. Notifications are generated locally and do not pass through external servers.</li>
+        </ul>
+
+        <h2>5. On-Device Data Storage</h2>
+        <p>The App may store locally on your iPhone:</p>
+        <ul>
+          <li>The IP address and port of your paired Mac (for automatic reconnection)</li>
+          <li>App preferences (language, notification settings)</li>
+          <li>Recent session history in local cache (in-memory only during use)</li>
+        </ul>
+        <p>This data is stored in the device's secure storage (iOS Keychain for pairing credentials, UserDefaults for preferences) and is never transmitted outside the device.</p>
+
+        <h2>6. Third-Party Services</h2>
+        <p>ClaudeWatch <strong>does not integrate</strong> any analytics, advertising, tracking, or third-party service SDKs. The App does not use:</p>
+        <ul>
+          <li>Google Analytics, Firebase, Mixpanel, Amplitude, or other analytics services</li>
+          <li>Advertising networks</li>
+          <li>Social media SDKs</li>
+          <li>External crash reporting services (such as Crashlytics or Sentry)</li>
+          <li>Heatmap or session recording tools</li>
+        </ul>
+
+        <h2>7. Children's Privacy</h2>
+        <p>ClaudeWatch is a technical tool designed for software developers. It is not directed to children under 13. Since the App does not collect any personal data, there is no risk of inadvertently collecting children's data.</p>
+
+        <h2>8. International Data Transfers</h2>
+        <p>Since ClaudeWatch does not collect or transmit data to any external servers, international data transfers do not apply. All information remains on your devices and local network.</p>
+
+        <h2>9. Security</h2>
+        <p>While ClaudeWatch does not transmit data to external servers, we recommend the following best practices:</p>
+        <ul>
+          <li>Use only your trusted home or work WiFi network for pairing</li>
+          <li>Do not use the app on public or unsecured WiFi networks</li>
+          <li>Keep both the iOS app and the macOS server up to date</li>
+        </ul>
+
+        <h2>10. Your Rights</h2>
+        <p>Since ClaudeWatch does not collect personal data, there is no data to request, correct, or delete on our end. The only data associated with the app is stored locally on your device, over which you have full control:</p>
+        <ul>
+          <li><strong>Delete local data:</strong> Uninstalling the app removes all locally stored data.</li>
+          <li><strong>Revoke permissions:</strong> You can revoke camera, local network, and notification permissions at any time from Settings > ClaudeWatch on your iPhone.</li>
+        </ul>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>Any material changes to this Privacy Policy will be reflected in the "Last updated" date at the top of this document. We recommend reviewing this page periodically. Continued use of the App after changes are posted constitutes your acceptance of those changes.</p>
+
+        <h2>12. Contact</h2>
+        <p>If you have questions about this Privacy Policy, you can contact us at:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:privacy@claudewatch.app">privacy@claudewatch.app</a></li>
+          <li><strong>General support:</strong> <a href="mailto:support@claudewatch.app">support@claudewatch.app</a></li>
+          <li><strong>GitHub:</strong> <a href="https://github.com/mitre88/claudewatch" target="_blank" rel="noopener">github.com/mitre88/claudewatch</a></li>
+        </ul>
+      </div>
+
+      <!-- FRENCH -->
+      <div class="legal-content legal-fr hidden">
+        <h2>1. Vue d'ensemble</h2>
+        <p>ClaudeWatch (« l'Application », « nous », « notre ») est une application iOS qui permet aux utilisateurs de surveiller les sessions Claude Code sur leur Mac depuis leur iPhone en utilisant une connexion réseau locale (WiFi). Cette Politique de Confidentialité décrit comment l'Application traite les informations des utilisateurs.</p>
+        <p><strong>Résumé :</strong> ClaudeWatch ne collecte, ne stocke, ne transmet ni ne vend aucune donnée personnelle. L'Application fonctionne exclusivement sur votre réseau local et aucune donnée ne quitte votre appareil ou votre réseau domiciliaire.</p>
+
+        <h2>2. Données que Nous Ne Collectons PAS</h2>
+        <p>ClaudeWatch <strong>ne collecte pas</strong> les informations suivantes :</p>
+        <ul>
+          <li>Nom, adresse e-mail ou toute autre information d'identification personnelle</li>
+          <li>Données d'utilisation, statistiques de session ou métriques comportementales</li>
+          <li>Informations sur l'appareil (modèle, version du système d'exploitation, identifiants)</li>
+          <li>Données de localisation (GPS ou autre géolocalisation)</li>
+          <li>Contenu des sessions Claude Code (commandes, réponses, code source)</li>
+          <li>Données financières, de santé ou autres données sensibles</li>
+          <li>Journaux de diagnostic ou rapports de plantage envoyés à des serveurs externes</li>
+        </ul>
+
+        <h2>3. Fonctionnement de la Connexion</h2>
+        <p>ClaudeWatch établit une connexion directe entre votre iPhone et votre Mac en utilisant exclusivement votre réseau WiFi local :</p>
+        <ul>
+          <li><strong>Découverte locale (Bonjour) :</strong> L'application utilise le protocole Bonjour (mDNS/DNS-SD) d'Apple pour découvrir le serveur sur votre Mac au sein du même réseau local. Ce protocole fonctionne entièrement dans votre réseau domiciliaire ou professionnel.</li>
+          <li><strong>Jumelage QR :</strong> Le code QR scanné contient uniquement l'adresse IP locale et le port de votre Mac dans votre réseau. Cette information n'est jamais envoyée à des serveurs externes.</li>
+          <li><strong>Transfert de données :</strong> Toute communication entre l'application et le serveur se fait directement entre les deux appareils, via WiFi local. Il n'existe pas de serveur intermédiaire dans le cloud.</li>
+        </ul>
+
+        <h2>4. Permissions de l'Application</h2>
+        <p>ClaudeWatch demande les permissions système suivantes :</p>
+        <ul>
+          <li><strong>Caméra :</strong> Utilisée exclusivement pour scanner le code QR de jumelage. L'application n'accède pas à la caméra dans un autre contexte. Les images capturées ne sont pas stockées ni transmises.</li>
+          <li><strong>Réseau local :</strong> Nécessaire pour que l'application puisse découvrir et se connecter au serveur sur votre Mac au sein du même réseau WiFi.</li>
+          <li><strong>Notifications push :</strong> Optionnelles. Permettent de recevoir des alertes locales lorsque l'état d'une session Claude Code change. Les notifications sont générées localement et ne transitent pas par des serveurs externes.</li>
+        </ul>
+
+        <h2>5. Stockage de Données sur l'Appareil</h2>
+        <p>L'Application peut stocker localement sur votre iPhone :</p>
+        <ul>
+          <li>L'adresse IP et le port de votre Mac jumelé (pour la reconnexion automatique)</li>
+          <li>Les préférences de l'application (langue, paramètres de notification)</li>
+          <li>L'historique récent des sessions en cache local (en mémoire uniquement pendant l'utilisation)</li>
+        </ul>
+        <p>Ces données sont stockées dans le stockage sécurisé de l'appareil (iOS Keychain pour les identifiants de jumelage, UserDefaults pour les préférences) et ne sont jamais transmises en dehors de l'appareil.</p>
+
+        <h2>6. Services Tiers</h2>
+        <p>ClaudeWatch <strong>n'intègre pas</strong> de SDK d'analyse, de publicité, de suivi ou de services tiers. L'Application n'utilise pas :</p>
+        <ul>
+          <li>Google Analytics, Firebase, Mixpanel, Amplitude ou autres services d'analyse</li>
+          <li>Réseaux publicitaires</li>
+          <li>SDK de réseaux sociaux</li>
+          <li>Services de rapport de plantage externes (comme Crashlytics ou Sentry)</li>
+          <li>Outils de carte de chaleur ou d'enregistrement de session</li>
+        </ul>
+
+        <h2>7. Protection des Mineurs</h2>
+        <p>ClaudeWatch est un outil technique conçu pour les développeurs de logiciels. Il n'est pas destiné aux enfants de moins de 13 ans. Étant donné que l'Application ne collecte aucune donnée personnelle, il n'y a aucun risque de collecte inadvertante de données d'enfants.</p>
+
+        <h2>8. Transferts Internationaux de Données</h2>
+        <p>Étant donné que ClaudeWatch ne collecte ni ne transmet de données à des serveurs externes, les transferts internationaux de données ne s'appliquent pas. Toutes les informations restent sur vos appareils et votre réseau local.</p>
+
+        <h2>9. Sécurité</h2>
+        <p>Bien que ClaudeWatch ne transmette pas de données à des serveurs externes, nous recommandons les bonnes pratiques suivantes :</p>
+        <ul>
+          <li>Utiliser uniquement votre réseau WiFi domiciliaire ou professionnel de confiance pour le jumelage</li>
+          <li>Ne pas utiliser l'application sur des réseaux WiFi publics ou non sécurisés</li>
+          <li>Maintenir à jour l'application iOS et le serveur macOS</li>
+        </ul>
+
+        <h2>10. Vos Droits</h2>
+        <p>Étant donné que ClaudeWatch ne collecte pas de données personnelles, il n'y a pas de données à demander, corriger ou supprimer de notre côté. Les seules données associées à l'application sont stockées localement sur votre appareil, sur lequel vous avez un contrôle total :</p>
+        <ul>
+          <li><strong>Supprimer les données locales :</strong> Désinstaller l'application supprime toutes les données stockées localement.</li>
+          <li><strong>Révoquer les permissions :</strong> Vous pouvez révoquer les permissions de caméra, réseau local et notifications à tout moment depuis Réglages > ClaudeWatch sur votre iPhone.</li>
+        </ul>
+
+        <h2>11. Modifications de cette Politique</h2>
+        <p>Tout changement matériel à cette Politique de Confidentialité sera reflété dans la date de « Dernière mise à jour » en haut de ce document. Nous vous recommandons de consulter cette page périodiquement. L'utilisation continue de l'Application après la publication de modifications constitue votre acceptation de ces modifications.</p>
+
+        <h2>12. Contact</h2>
+        <p>Si vous avez des questions sur cette Politique de Confidentialité, vous pouvez nous contacter à :</p>
+        <ul>
+          <li><strong>E-mail :</strong> <a href="mailto:privacy@claudewatch.app">privacy@claudewatch.app</a></li>
+          <li><strong>Support général :</strong> <a href="mailto:support@claudewatch.app">support@claudewatch.app</a></li>
+          <li><strong>GitHub :</strong> <a href="https://github.com/mitre88/claudewatch" target="_blank" rel="noopener">github.com/mitre88/claudewatch</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ─── Footer ────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <a href="/" class="footer-brand nav-logo" style="text-decoration:none;">
+            <span class="nav-logo-icon">⌚</span>
+            <span>ClaudeWatch</span>
+          </a>
+        </div>
+        <div class="footer-center">
+          <p class="footer-copy">© 2025 ClaudeWatch. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="support.html">Support</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Privacy page language switching (shows/hides language blocks)
+    function applyPrivacyLang(lang) {
+      const blocks = ['es', 'en', 'fr'];
+      blocks.forEach(l => {
+        document.querySelectorAll('.legal-' + l).forEach(el => {
+          el.classList.toggle('hidden', l !== lang);
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('cw_lang') || 'es';
+      applyPrivacyLang(savedLang);
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyPrivacyLang(btn.dataset.lang);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
