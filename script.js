@@ -94,6 +94,29 @@ const translations = {
     priv6: "CODIGO_ABIERTO",
     priv6_desc: "Código visible y auditable",
 
+    nav_pricing: "Precios",
+
+    pricing_label: "$ pricing --plans",
+    pricing_title: "Empieza Gratis, Pasa a Pro",
+    pricing_subtitle: "Prueba ClaudeWatch gratis por 5 dias. Luego elige el plan que mejor te funcione.",
+    pricing_monthly_title: "Mensual",
+    pricing_monthly_period: "/mes",
+    pricing_annual_title: "Anual",
+    pricing_annual_period: "/anio",
+    pricing_annual_badge: "Mejor Valor",
+    pricing_annual_subtext: "$2.00/mes — Ahorra vs mensual",
+    pricing_lifetime_title: "De por Vida",
+    pricing_lifetime_badge: "Para Siempre",
+    pricing_lifetime_subtext: "Pago unico",
+    pricing_feat_pro: "Todas las funciones Pro",
+    pricing_feat_cancel: "Cancela cuando quieras",
+    pricing_feat_monitor: "Acceso completo al monitoreo",
+    pricing_feat_free_months: "2 meses gratis",
+    pricing_feat_no_renewals: "Sin renovaciones",
+    pricing_feat_lifetime_updates: "Actualizaciones de por vida",
+    pricing_cta: "Iniciar Prueba Gratis",
+    pricing_disclaimer: "Prueba gratuita de 5 dias en todos los planes. No se requiere tarjeta de credito.",
+
     footer_tagline: "// Monitoreo local para Claude Code",
     footer_privacy: "Privacidad",
     footer_terms: "Términos",
@@ -189,6 +212,29 @@ const translations = {
     priv6: "OPEN_SOURCE",
     priv6_desc: "Code is open and auditable",
 
+    nav_pricing: "Pricing",
+
+    pricing_label: "$ pricing --plans",
+    pricing_title: "Start Free, Go Pro",
+    pricing_subtitle: "Try ClaudeWatch free for 5 days. Then choose the plan that works for you.",
+    pricing_monthly_title: "Monthly",
+    pricing_monthly_period: "/mo",
+    pricing_annual_title: "Annual",
+    pricing_annual_period: "/yr",
+    pricing_annual_badge: "Best Value",
+    pricing_annual_subtext: "$2.00/mo — Save vs monthly",
+    pricing_lifetime_title: "Lifetime",
+    pricing_lifetime_badge: "Forever",
+    pricing_lifetime_subtext: "One-time payment",
+    pricing_feat_pro: "All Pro features",
+    pricing_feat_cancel: "Cancel anytime",
+    pricing_feat_monitor: "Full monitoring access",
+    pricing_feat_free_months: "2 months free",
+    pricing_feat_no_renewals: "No renewals ever",
+    pricing_feat_lifetime_updates: "Lifetime updates",
+    pricing_cta: "Start Free Trial",
+    pricing_disclaimer: "5-day free trial for all plans. No credit card required to start.",
+
     footer_tagline: "// Local monitoring for Claude Code",
     footer_privacy: "Privacy Policy",
     footer_terms: "Terms",
@@ -283,6 +329,29 @@ const translations = {
     priv5_desc: "Caméra uniquement pour scanner le QR",
     priv6: "CODE_OUVERT",
     priv6_desc: "Code visible et auditable",
+
+    nav_pricing: "Tarifs",
+
+    pricing_label: "$ pricing --plans",
+    pricing_title: "Commencez Gratuitement, Passez Pro",
+    pricing_subtitle: "Essayez ClaudeWatch gratuitement pendant 5 jours. Puis choisissez le plan qui vous convient.",
+    pricing_monthly_title: "Mensuel",
+    pricing_monthly_period: "/mois",
+    pricing_annual_title: "Annuel",
+    pricing_annual_period: "/an",
+    pricing_annual_badge: "Meilleur Rapport",
+    pricing_annual_subtext: "2,00 $/mois — Economisez vs mensuel",
+    pricing_lifetime_title: "A Vie",
+    pricing_lifetime_badge: "Pour Toujours",
+    pricing_lifetime_subtext: "Paiement unique",
+    pricing_feat_pro: "Toutes les fonctionnalites Pro",
+    pricing_feat_cancel: "Annulez a tout moment",
+    pricing_feat_monitor: "Acces complet au monitoring",
+    pricing_feat_free_months: "2 mois gratuits",
+    pricing_feat_no_renewals: "Aucun renouvellement",
+    pricing_feat_lifetime_updates: "Mises a jour a vie",
+    pricing_cta: "Essai Gratuit",
+    pricing_disclaimer: "Essai gratuit de 5 jours pour tous les plans. Aucune carte de credit requise.",
 
     footer_tagline: "// Surveillance locale pour Claude Code",
     footer_privacy: "Politique de confidentialité",
@@ -453,7 +522,7 @@ function initScrollEffects() {
 function initScrollReveal() {
   if (!window.IntersectionObserver) return;
 
-  const cards = document.querySelectorAll('.feature-card, .step, .screenshot-item');
+  const cards = document.querySelectorAll('.feature-card, .step, .screenshot-item, .pricing-card');
   if (!cards.length) return;
 
   const io = new IntersectionObserver((entries) => {
