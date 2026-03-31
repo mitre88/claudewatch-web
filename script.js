@@ -522,7 +522,7 @@ function initScrollEffects() {
 function initScrollReveal() {
   if (!window.IntersectionObserver) return;
 
-  const cards = document.querySelectorAll('.feature-card, .step, .screenshot-item, .pricing-card');
+  const cards = document.querySelectorAll('.feature-card, .step, .screenshot-item, .pricing-card, .section-header');
   if (!cards.length) return;
 
   const io = new IntersectionObserver((entries) => {
@@ -532,12 +532,39 @@ function initScrollReveal() {
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-  cards.forEach(card => {
+  cards.forEach((card, index) => {
     card.classList.add('reveal-ready');
+    card.setAttribute('data-delay', ((index % 6) + 1).toString());
     io.observe(card);
   });
+}
+
+// ─── Floating Particles ────────────────────────────────────────────────────────
+
+function initParticles() {
+  const container = document.querySelector('.particles-container');
+  if (!container) return;
+
+  const particleCount = 15;
+
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.className = `particle particle--${Math.random() > 0.5 ? 'green' : 'orange'}`;
+    
+    // Randomize position and animation
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.animationDelay = `${Math.random() * 20}s`;
+    particle.style.animationDuration = `${15 + Math.random() * 10}s`;
+    
+    // Random size
+    const size = 2 + Math.random() * 4;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    
+    container.appendChild(particle);
+  }
 }
 
 // ─── Init ─────────────────────────────────────────────────────────────────────
@@ -547,6 +574,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('matrix-canvas')) {
     initMatrixRain();
   }
+
+  // Floating particles
+  initParticles();
 
   // Language switcher
   document.querySelectorAll('.lang-btn').forEach(btn => {
