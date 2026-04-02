@@ -99,7 +99,7 @@
             <div class="term-body">
               <div class="term-line">
                 <span class="term-user">user@mac</span><span class="term-at">:</span><span class="term-path">~</span><span class="term-dollar">$</span>
-                <span class="term-cmd"> bash &lt;(curl -sL https://claudewatch.app/install.sh)</span>
+                <span class="term-cmd"> curl -fsSL https://claudewatch-web.vercel.app/install.sh | bash</span>
                 <button class="copy-btn" id="copy-btn" data-i18n="step1_copy" aria-label="Copy install command">copy</button>
               </div>
               <div class="term-line term-output">
@@ -112,7 +112,7 @@
                 <span class="term-green">✓</span> Starting server on port <span class="term-orange">7432</span>
               </div>
               <div class="term-line term-output">
-                <span class="term-dim">  Scan QR code with ClaudeWatch on iPhone</span>
+                <span class="term-dim">  Run ~/Library/ClaudeWatch/claudewatch link to pair</span>
               </div>
               <div class="term-line">
                 <span class="term-user">user@mac</span><span class="term-at">:</span><span class="term-path">~</span><span class="term-dollar">$</span>
@@ -374,7 +374,7 @@
               <div class="term-body">
                 <div class="term-line">
                   <span class="term-dollar">$</span>
-                  <span class="term-cmd"> bash &lt;(curl -sL https://claudewatch.app/install.sh)</span>
+                  <span class="term-cmd"> curl -fsSL https://claudewatch-web.vercel.app/install.sh | bash</span>
                 </div>
               </div>
             </div>
@@ -387,8 +387,8 @@
           </div>
           <div class="step-body">
             <div class="step-prompt mono" aria-hidden="true">&gt;&gt;&gt;</div>
-            <h3 data-i18n="step2_title">Scan the QR code</h3>
-            <p data-i18n="step2_desc">Open ClaudeWatch on your iPhone and scan the QR displayed on your Mac. Pairing is automatic.</p>
+            <h3 data-i18n="step2_title">Run the link command</h3>
+            <p data-i18n="step2_desc">After installing, run ~/Library/ClaudeWatch/claudewatch link on your Mac. It opens the pairing page with QR and manual host / port / token fallback.</p>
             <div class="step-visual">
               <div class="qr-mock" aria-hidden="true">
                 <div class="qr-corner qr-corner--tl"></div>

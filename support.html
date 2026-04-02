@@ -130,7 +130,7 @@
             </button>
             <div class="faq-answer">
               Para desinstalar el servidor, ejecuta en Terminal:<br><br>
-              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">bash &lt;(curl -sL https://claudewatch.app/uninstall.sh)</code><br><br>
+              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">curl -fsSL https://claudewatch-web.vercel.app/uninstall.sh | bash</code><br><br>
               Esto eliminará el servidor, el agente de LaunchAgent y todos los archivos de configuración.
             </div>
           </div>
@@ -147,9 +147,9 @@
             <h4>🔍 El servidor no aparece en la app</h4>
             <ul class="steps-list">
               <li data-step="1">Verifica que tu iPhone y tu Mac estén en la misma red WiFi.</li>
-              <li data-step="2">Confirma que el servidor está corriendo: abre Terminal y escribe <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch status</code>.</li>
-              <li data-step="3">Si el servidor está detenido, inícialo con <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch start</code>.</li>
-              <li data-step="4">Revisa que el firewall de tu Mac no esté bloqueando el puerto 8765 (Preferencias del Sistema > Seguridad y Privacidad > Firewall).</li>
+              <li data-step="2">En tu Mac ejecuta <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch link</code>. Ese comando levanta el servidor si hace falta y reabre la página de pairing.</li>
+              <li data-step="3">Si ese comando no existe, vuelve a correr la instalación con <code style="font-family:var(--font-mono);font-size:0.82em;">curl -fsSL https://claudewatch-web.vercel.app/install.sh | bash</code>. Pégalo completo y no uses <code style="font-family:var(--font-mono);font-size:0.82em;">sudo</code>.</li>
+              <li data-step="4">Revisa que el firewall de tu Mac no esté bloqueando el puerto 7432 (Preferencias del Sistema &gt; Seguridad y Privacidad &gt; Firewall).</li>
               <li data-step="5">Reinicia la búsqueda en la app arrastrando hacia abajo en la lista de dispositivos.</li>
             </ul>
           </div>
@@ -160,7 +160,7 @@
               <li data-step="1">Asegúrate de que tu Mac no entre en modo de suspensión mientras usas la app (Ajustes del Sistema > Batería > Evitar suspensión).</li>
               <li data-step="2">Verifica que la señal WiFi sea estable en ambos dispositivos.</li>
               <li data-step="3">Si usas una red con bandas 2.4GHz y 5GHz separadas, conecta ambos dispositivos a la misma banda.</li>
-              <li data-step="4">Reinicia el servidor: <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch restart</code> en Terminal.</li>
+              <li data-step="4">Reinicia el servidor con <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch restart</code> en Terminal.</li>
             </ul>
           </div>
 
@@ -171,7 +171,7 @@
               <li data-step="2">Asegúrate de que haya buena iluminación y que el QR esté completamente visible en el visor.</li>
               <li data-step="3">Intenta limpiar la pantalla de tu Mac y alejar ligeramente el iPhone.</li>
               <li data-step="4">Como alternativa, usa la opción "Ingresar IP manualmente" en la pantalla de emparejamiento.</li>
-              <li data-step="5">Si el QR expiró (más de 5 minutos), regenera uno nuevo con <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch qr</code>.</li>
+              <li data-step="5">Si necesitas un QR nuevo, vuelve a abrir pairing con <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch link</code>.</li>
             </ul>
           </div>
 
@@ -305,7 +305,7 @@
             </button>
             <div class="faq-answer">
               To uninstall the server, run in Terminal:<br><br>
-              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">bash &lt;(curl -sL https://claudewatch.app/uninstall.sh)</code><br><br>
+              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">curl -fsSL https://claudewatch-web.vercel.app/uninstall.sh | bash</code><br><br>
               This will remove the server, the LaunchAgent, and all configuration files.
             </div>
           </div>
@@ -321,9 +321,9 @@
             <h4>🔍 Server not appearing in app</h4>
             <ul class="steps-list">
               <li data-step="1">Verify your iPhone and Mac are on the same WiFi network.</li>
-              <li data-step="2">Confirm the server is running: open Terminal and type <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch status</code>.</li>
-              <li data-step="3">If the server is stopped, start it with <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch start</code>.</li>
-              <li data-step="4">Check that your Mac's firewall isn't blocking port 8765 (System Preferences > Security & Privacy > Firewall).</li>
+              <li data-step="2">On your Mac run <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch link</code>. That command starts the server if needed and reopens the pairing page.</li>
+              <li data-step="3">If that command is missing, rerun the installer with <code style="font-family:var(--font-mono);font-size:0.82em;">curl -fsSL https://claudewatch-web.vercel.app/install.sh | bash</code>. Paste it exactly and do not use <code style="font-family:var(--font-mono);font-size:0.82em;">sudo</code>.</li>
+              <li data-step="4">Check that your Mac's firewall isn't blocking port 7432 (System Preferences &gt; Security &amp; Privacy &gt; Firewall).</li>
               <li data-step="5">Restart the search in the app by pulling down on the device list.</li>
             </ul>
           </div>
@@ -334,7 +334,7 @@
               <li data-step="1">Make sure your Mac doesn't sleep while using the app (System Settings > Battery > Prevent sleep).</li>
               <li data-step="2">Verify the WiFi signal is stable on both devices.</li>
               <li data-step="3">If using a network with separate 2.4GHz and 5GHz bands, connect both devices to the same band.</li>
-              <li data-step="4">Restart the server: <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch restart</code> in Terminal.</li>
+              <li data-step="4">Restart the server with <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch restart</code> in Terminal.</li>
             </ul>
           </div>
 
@@ -345,7 +345,7 @@
               <li data-step="2">Make sure there is good lighting and the QR is fully visible in the viewfinder.</li>
               <li data-step="3">Try cleaning your Mac screen and holding the iPhone slightly further away.</li>
               <li data-step="4">As an alternative, use the "Enter IP manually" option on the pairing screen.</li>
-              <li data-step="5">If the QR has expired (older than 5 minutes), regenerate one with <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch qr</code>.</li>
+              <li data-step="5">If you need a fresh QR, reopen pairing with <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch link</code>.</li>
             </ul>
           </div>
 
@@ -478,7 +478,7 @@
             </button>
             <div class="faq-answer">
               Pour désinstaller le serveur, exécutez dans Terminal :<br><br>
-              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">bash &lt;(curl -sL https://claudewatch.app/uninstall.sh)</code><br><br>
+              <code style="font-family: var(--font-mono); background: var(--bg-card); padding: 8px 12px; border-radius: 6px; font-size: 0.82rem; display:inline-block; color: var(--text-secondary);">curl -fsSL https://claudewatch-web.vercel.app/uninstall.sh | bash</code><br><br>
               Cela supprimera le serveur, le LaunchAgent et tous les fichiers de configuration.
             </div>
           </div>
@@ -494,9 +494,9 @@
             <h4>🔍 Le serveur n'apparaît pas</h4>
             <ul class="steps-list">
               <li data-step="1">Vérifiez que votre iPhone et votre Mac sont sur le même réseau WiFi.</li>
-              <li data-step="2">Confirmez que le serveur fonctionne : ouvrez Terminal et tapez <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch status</code>.</li>
-              <li data-step="3">Si le serveur est arrêté, démarrez-le avec <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch start</code>.</li>
-              <li data-step="4">Vérifiez que le pare-feu de votre Mac ne bloque pas le port 8765.</li>
+              <li data-step="2">Sur votre Mac, exécutez <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch link</code>. Cette commande démarre le serveur si nécessaire et rouvre la page de jumelage.</li>
+              <li data-step="3">Si cette commande n'existe pas, relancez l'installation avec <code style="font-family:var(--font-mono);font-size:0.82em;">curl -fsSL https://claudewatch-web.vercel.app/install.sh | bash</code>. Collez-la entière et n'utilisez pas <code style="font-family:var(--font-mono);font-size:0.82em;">sudo</code>.</li>
+              <li data-step="4">Vérifiez que le pare-feu de votre Mac ne bloque pas le port 7432.</li>
               <li data-step="5">Relancez la recherche dans l'application en tirant vers le bas.</li>
             </ul>
           </div>
@@ -507,7 +507,7 @@
               <li data-step="1">Assurez-vous que votre Mac ne se met pas en veille (Réglages Système > Batterie > Empêcher la veille).</li>
               <li data-step="2">Vérifiez que le signal WiFi est stable sur les deux appareils.</li>
               <li data-step="3">Connectez les deux appareils à la même bande (2.4GHz ou 5GHz).</li>
-              <li data-step="4">Redémarrez le serveur : <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch restart</code>.</li>
+              <li data-step="4">Redémarrez le serveur avec <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch restart</code>.</li>
             </ul>
           </div>
 
@@ -518,7 +518,7 @@
               <li data-step="2">Assurez-vous d'une bonne luminosité et que le QR est entièrement visible.</li>
               <li data-step="3">Nettoyez l'écran de votre Mac et éloignez légèrement l'iPhone.</li>
               <li data-step="4">Utilisez l'option "Saisir l'IP manuellement" sur l'écran de jumelage.</li>
-              <li data-step="5">Régénérez un nouveau QR avec <code style="font-family:var(--font-mono);font-size:0.82em;">claudewatch qr</code>.</li>
+              <li data-step="5">Si vous avez besoin d'un nouveau QR, rouvrez le jumelage avec <code style="font-family:var(--font-mono);font-size:0.82em;">~/Library/ClaudeWatch/claudewatch link</code>.</li>
             </ul>
           </div>
 

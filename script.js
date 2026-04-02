@@ -44,8 +44,8 @@ const translations = {
     feat3_title: "Dynamic Island",
     feat3_desc: "Seguimiento de sesiones activas en el Dynamic Island del iPhone 14 Pro y posteriores. Siempre visible.",
 
-    feat4_title: "Emparejamiento QR",
-    feat4_desc: "Escanea el código QR en tu Mac para emparejar en segundos. Sin configuración compleja.",
+    feat4_title: "Emparejamiento rápido",
+    feat4_desc: "Ejecuta el comando de vinculación en tu Mac para abrir la página de pairing con QR y respaldo manual por host, puerto y token.",
 
     feat5_title: "Bonjour auto-discovery",
     feat5_desc: "Tu iPhone detecta automáticamente el servidor en tu Mac usando Bonjour, como AirDrop.",
@@ -69,8 +69,8 @@ const translations = {
     step1_copy: "copiar",
     step1_copied: "copiado",
 
-    step2_title: "Escanea el código QR",
-    step2_desc: "Abre ClaudeWatch en tu iPhone y escanea el QR que aparece en tu Mac. El emparejamiento es automático.",
+    step2_title: "Ejecuta el comando de vinculación",
+    step2_desc: "Después de instalar, ejecuta ~/Library/ClaudeWatch/claudewatch link en tu Mac. Se abre la página de pairing con QR y opción manual.",
 
     step3_title: "Monitorea desde tu iPhone",
     step3_desc: "Tu iPhone se conecta a tu Mac por WiFi local. Ve las sesiones activas, recibe notificaciones y controla Claude Code.",
@@ -162,8 +162,8 @@ const translations = {
     feat3_title: "Dynamic Island",
     feat3_desc: "Active session tracking in the Dynamic Island on iPhone 14 Pro and later. Always visible.",
 
-    feat4_title: "QR pairing",
-    feat4_desc: "Scan the QR code on your Mac to pair in seconds. No complex setup required.",
+    feat4_title: "Fast pairing",
+    feat4_desc: "Run the Mac link command to open the pairing page with QR and manual host, port, and token fallback.",
 
     feat5_title: "Bonjour auto-discovery",
     feat5_desc: "Your iPhone automatically finds the server on your Mac using Bonjour, just like AirDrop.",
@@ -187,8 +187,8 @@ const translations = {
     step1_copy: "copy",
     step1_copied: "copied",
 
-    step2_title: "Scan the QR code",
-    step2_desc: "Open ClaudeWatch on your iPhone and scan the QR displayed on your Mac. Pairing is automatic.",
+    step2_title: "Run the link command",
+    step2_desc: "After installing, run ~/Library/ClaudeWatch/claudewatch link on your Mac. It opens the pairing page with QR and a manual fallback.",
 
     step3_title: "Monitor from your iPhone",
     step3_desc: "Your iPhone connects to your Mac over local WiFi. View active sessions, get notifications, and control Claude Code.",
@@ -280,8 +280,8 @@ const translations = {
     feat3_title: "Dynamic Island",
     feat3_desc: "Suivi des sessions actives dans le Dynamic Island de l'iPhone 14 Pro et suivants. Toujours visible.",
 
-    feat4_title: "Jumelage QR",
-    feat4_desc: "Scannez le code QR sur votre Mac pour jumeler en quelques secondes. Aucune configuration complexe.",
+    feat4_title: "Jumelage rapide",
+    feat4_desc: "Exécutez la commande de liaison sur votre Mac pour ouvrir la page de jumelage avec QR et secours manuel via hôte, port et token.",
 
     feat5_title: "Découverte automatique Bonjour",
     feat5_desc: "Votre iPhone détecte automatiquement le serveur sur votre Mac via Bonjour, comme AirDrop.",
@@ -305,8 +305,8 @@ const translations = {
     step1_copy: "copier",
     step1_copied: "copié",
 
-    step2_title: "Scannez le code QR",
-    step2_desc: "Ouvrez ClaudeWatch sur votre iPhone et scannez le QR affiché sur votre Mac. Le jumelage est automatique.",
+    step2_title: "Exécutez la commande de liaison",
+    step2_desc: "Après l'installation, exécutez ~/Library/ClaudeWatch/claudewatch link sur votre Mac. La page de jumelage s'ouvre avec QR et option manuelle.",
 
     step3_title: "Surveillez depuis votre iPhone",
     step3_desc: "Votre iPhone se connecte à votre Mac via le WiFi local. Voyez les sessions actives, recevez des notifications et contrôlez Claude Code.",
@@ -463,7 +463,7 @@ function setLanguage(lang) {
 // ─── Copy Command ─────────────────────────────────────────────────────────────
 
 function copyInstallCommand() {
-  const cmd = 'bash <(curl -sL https://claudewatch.app/install.sh)';
+  const cmd = 'curl -fsSL https://claudewatch-web.vercel.app/install.sh | bash';
   const btn = document.getElementById('copy-btn');
 
   navigator.clipboard.writeText(cmd).then(() => {
