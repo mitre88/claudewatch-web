@@ -20,8 +20,8 @@
   --text-sec:   #9CA3AF;
   --text-dim:   #6B7280;
 
-  --font:       'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono:  'Roboto Mono', 'SF Mono', 'Fira Code', Consolas, monospace;
+  --font:       'Roboto', sans-serif;
+  --font-mono:  'Roboto Mono', monospace;
 
   --r-sm: 6px;
   --r-md: 8px;
@@ -434,12 +434,12 @@ p  { color: var(--text-sec); }
 .hero-qr {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-top: 1rem;
-  padding: 0.5rem 0.75rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--r-md);
+  border-radius: var(--r-lg);
   transition: border-color var(--t), box-shadow var(--t);
 }
 
@@ -452,20 +452,20 @@ p  { color: var(--text-sec); }
   display: block;
   line-height: 0;
   flex-shrink: 0;
-  width: 90px;
+  width: 180px;
 }
 
 .hero-qr-svg {
-  width: 90px;
-  height: 90px;
-  min-width: 90px;
-  max-width: 90px;
-  border-radius: 4px;
+  width: 180px;
+  height: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  border-radius: 6px;
   display: block;
 }
 
 .hero-qr-label {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--text-dim);
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -478,8 +478,8 @@ p  { color: var(--text-sec); }
   }
 
   .hero-qr-svg {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
   }
 }
 
