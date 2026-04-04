@@ -435,102 +435,6 @@ p  { color: var(--text-sec); line-height: 1.65; }
   color: var(--text);
 }
 
-/* ─── Hero QR Button ────────────────────────────────── */
-@keyframes qrPulseGlow {
-  0%, 100% { box-shadow: 0 0 6px rgba(255,154,31,0.15), 0 0 12px rgba(255,154,31,0.05); }
-  50%      { box-shadow: 0 0 10px rgba(255,154,31,0.3), 0 0 20px rgba(255,154,31,0.1); }
-}
-
-@keyframes qrBorderGlow {
-  0%, 100% { border-color: #FF9A1F; box-shadow: 0 0 24px rgba(255,154,31,0.3), 0 0 48px rgba(255,154,31,0.12); }
-  50%      { border-color: #ffb84d; box-shadow: 0 0 32px rgba(255,154,31,0.45), 0 0 64px rgba(255,154,31,0.18); }
-}
-
-.btn-qr {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  position: relative;
-  z-index: 10;
-}
-
-/* Backdrop overlay on hover */
-.btn-qr::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(13,17,23,0.75);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 90;
-}
-
-.btn-qr:hover::before,
-.btn-qr:focus::before {
-  opacity: 1;
-}
-
-/* "Scan to download" label on hover */
-.btn-qr::after {
-  content: "Scan to download";
-  position: absolute;
-  left: 50%;
-  top: calc(100% + 180px);
-  transform: translateX(-50%);
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: #FF9A1F;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 101;
-}
-
-.btn-qr:hover::after,
-.btn-qr:focus::after {
-  opacity: 1;
-}
-
-.btn-qr-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 4px;
-  border: 1px solid var(--border);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              border-radius 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  line-height: 0;
-  cursor: pointer;
-  transform-origin: center center;
-  animation: qrPulseGlow 2.5s ease-in-out infinite;
-}
-
-.btn-qr-inner svg {
-  display: block;
-  width: 36px;
-  height: 36px;
-}
-
-.btn-qr:hover .btn-qr-inner,
-.btn-qr:focus .btn-qr-inner {
-  transform: scale(8) !important;
-  border-radius: 14px;
-  padding: 6px;
-  animation: qrBorderGlow 1.8s ease-in-out infinite !important;
-  z-index: 100;
-  position: relative;
-}
-
 /* ─── Hero Terminal ──────────────────────────────────── */
 .term-window--hero { margin-top: 8px; }
 .term-window--hero .term-body { gap: 2px; }
@@ -1119,98 +1023,239 @@ p  { color: var(--text-sec); line-height: 1.65; }
   margin-top: 32px;
 }
 
-/* ─── QR Download Section ────────────────────────────── */
-.qr-download-section {
-  padding: 5rem 0;
+/* ─── Get the App Section ────────────────────────────── */
+@keyframes floatQR {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
 }
 
-.qr-download-inner {
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50%       { opacity: 0.7;  transform: scale(1.06); }
+}
+
+.get-app-section {
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.get-app-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 75% 55%, rgba(255,154,31,0.05) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 35% at 20% 40%, rgba(57,211,83,0.03) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.get-app-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 4rem;
+  gap: 80px;
 }
 
-.qr-download-text {
+/* ── Left: copy ── */
+.get-app-copy {
   flex: 1;
-  max-width: 480px;
+  max-width: 520px;
 }
 
-.qr-download-text .section-title {
-  margin-bottom: 0.75rem;
+.get-app-heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 12px 0 20px;
 }
 
-.qr-download-text .section-subtitle {
-  margin-bottom: 1.5rem;
-  color: var(--text-sec);
+.get-app-heading-accent {
+  color: var(--orange);
+}
+
+.get-app-subtext {
   font-size: 1.05rem;
-  line-height: 1.6;
+  color: var(--text-sec);
+  line-height: 1.65;
+  margin-bottom: 40px;
+  max-width: 440px;
 }
 
-.qr-store-btn {
+.get-app-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.get-app-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.get-app-step-num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: 0.04em;
+  min-width: 24px;
+  opacity: 0.8;
+}
+
+.get-app-step-text {
+  font-size: 0.95rem;
+  color: var(--text-sec);
+  line-height: 1.5;
+}
+
+.get-app-store-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
   font-size: 1rem;
 }
 
-.qr-download-code {
+/* ── Right: QR card ── */
+.get-app-qr-wrap {
   flex-shrink: 0;
+  position: relative;
 }
 
-.qr-download-card {
+.get-app-qr-card {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  padding: 1.5rem;
-  text-align: center;
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  animation: floatQR 5s ease-in-out infinite;
+  box-shadow:
+    0 0 0 1px rgba(255,154,31,0.08),
+    0 8px 32px rgba(0,0,0,0.4),
+    0 32px 64px rgba(0,0,0,0.25);
   transition: border-color var(--t), box-shadow var(--t);
 }
 
-.qr-download-card:hover {
-  border-color: var(--orange);
-  box-shadow: 0 0 30px var(--orange-dim), 0 0 60px rgba(255, 154, 31, 0.06);
+.get-app-qr-card:hover {
+  border-color: rgba(255,154,31,0.35);
+  box-shadow:
+    0 0 0 1px rgba(255,154,31,0.2),
+    0 0 40px rgba(255,154,31,0.12),
+    0 8px 32px rgba(0,0,0,0.4),
+    0 32px 64px rgba(0,0,0,0.25);
 }
 
-.qr-download-svg {
-  width: 260px;
-  height: 260px;
+.get-app-qr-glow {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,154,31,0.22) 0%, transparent 70%);
+  pointer-events: none;
+  animation: glowPulse 4s ease-in-out infinite;
+  z-index: 0;
+}
+
+.get-app-qr-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--bg-card-2);
+  border-bottom: 1px solid var(--border-dim);
+  position: relative;
+  z-index: 1;
+}
+
+.get-app-qr-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.get-app-qr-dots span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.get-app-qr-dots .dot-r { background: #FF5F57; }
+.get-app-qr-dots .dot-y { background: #FEBC2E; }
+.get-app-qr-dots .dot-g { background: #28C840; }
+
+.get-app-qr-eyebrow {
+  font-size: 0.7rem;
+  color: var(--green);
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+.get-app-qr-link {
   display: block;
-  margin: 0 auto;
-  border-radius: 4px;
+  position: relative;
+  z-index: 1;
 }
 
-.qr-download-label {
-  margin-top: 1rem;
-  font-size: 0.75rem;
+.get-app-qr-frame {
+  padding: 24px;
+  background: var(--bg-card);
+}
+
+.get-app-qr-svg {
+  width: 240px;
+  height: 240px;
+  display: block;
+  border-radius: 6px;
+}
+
+.get-app-qr-label {
+  font-size: 0.7rem;
   color: var(--text-dim);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 12px 24px 16px;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-card-2);
+  border-top: 1px solid var(--border-dim);
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  .qr-download-inner {
+@media (max-width: 900px) {
+  .get-app-inner {
     flex-direction: column;
+    gap: 56px;
     text-align: center;
-    gap: 2.5rem;
   }
 
-  .qr-download-text {
+  .get-app-copy {
     max-width: 100%;
   }
 
-  .qr-download-text .section-label,
-  .qr-download-text .section-title,
-  .qr-download-text .section-subtitle {
-    text-align: center;
+  .get-app-subtext {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .qr-store-btn {
+  .get-app-heading br { display: none; }
+
+  .get-app-step {
+    justify-content: center;
+  }
+
+  .get-app-store-btn {
     margin: 0 auto;
   }
 
-  .qr-download-svg {
-    width: 220px;
-    height: 220px;
+  .get-app-qr-svg {
+    width: 200px;
+    height: 200px;
   }
 }
 
