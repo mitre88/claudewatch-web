@@ -468,11 +468,13 @@ p  { color: var(--text-sec); line-height: 1.65; }
   height: 36px;
 }
 
-.btn-qr:hover .btn-qr-inner {
-  transform: scale(4);
-  border-color: var(--orange);
-  box-shadow: 0 0 24px var(--orange-dim), 0 0 48px rgba(255, 154, 31, 0.1);
+.btn-qr:hover .btn-qr-inner,
+.btn-qr:focus .btn-qr-inner {
+  transform: scale(4) !important;
+  border-color: #FF9A1F !important;
+  box-shadow: 0 0 24px rgba(255,154,31,0.25), 0 0 48px rgba(255,154,31,0.1) !important;
   z-index: 100;
+  position: relative;
 }
 
 /* ─── Hero Terminal ──────────────────────────────────── */
