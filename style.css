@@ -438,9 +438,7 @@ p  { color: var(--text-sec); line-height: 1.65; }
 /* ─── Hero QR Button ────────────────────────────────── */
 .btn-qr {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  gap: 4px;
   text-decoration: none;
   position: relative;
 }
@@ -455,8 +453,9 @@ p  { color: var(--text-sec); line-height: 1.65; }
   border-radius: 10px;
   padding: 4px;
   border: 1px solid var(--border);
-  transition: all var(--t);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   line-height: 0;
+  cursor: pointer;
 }
 
 .btn-qr-inner svg {
@@ -466,22 +465,22 @@ p  { color: var(--text-sec); line-height: 1.65; }
 }
 
 .btn-qr:hover .btn-qr-inner {
+  width: 160px;
+  height: 160px;
+  padding: 10px;
   border-color: var(--orange);
-  box-shadow: 0 0 16px var(--orange-dim), 0 0 32px rgba(255, 154, 31, 0.08);
-  transform: translateY(-1px);
+  box-shadow: 0 0 24px var(--orange-dim), 0 0 48px rgba(255, 154, 31, 0.1);
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  border-radius: 12px;
 }
 
-.btn-qr-label {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  color: var(--text-dim);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  transition: color var(--t);
-}
-
-.btn-qr:hover .btn-qr-label {
-  color: var(--orange);
+.btn-qr:hover .btn-qr-inner svg {
+  width: 140px;
+  height: 140px;
 }
 
 /* ─── Hero Terminal ──────────────────────────────────── */
