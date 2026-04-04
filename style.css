@@ -451,12 +451,17 @@ p  { color: var(--text-sec); }
 .hero-qr-link {
   display: block;
   line-height: 0;
+  flex-shrink: 0;
+  width: 90px;
 }
 
 .hero-qr-svg {
   width: 90px;
   height: 90px;
+  min-width: 90px;
+  max-width: 90px;
   border-radius: 4px;
+  display: block;
 }
 
 .hero-qr-label {
