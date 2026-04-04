@@ -430,6 +430,54 @@ p  { color: var(--text-sec); }
   color: var(--text);
 }
 
+/* ─── Hero QR ────────────────────────────────────────── */
+.hero-qr {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  transition: border-color var(--t), box-shadow var(--t);
+}
+
+.hero-qr:hover {
+  border-color: var(--orange);
+  box-shadow: 0 0 20px var(--orange-dim);
+}
+
+.hero-qr-link {
+  display: block;
+  line-height: 0;
+}
+
+.hero-qr-svg {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+}
+
+.hero-qr-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 768px) {
+  .hero-qr {
+    justify-content: center;
+  }
+
+  .hero-qr-svg {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 /* ─── Hero Terminal ──────────────────────────────────── */
 .term-window--hero { margin-top: 8px; }
 .term-window--hero .term-body { gap: 2px; }
