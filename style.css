@@ -470,7 +470,7 @@ p  { color: var(--text-sec); line-height: 1.65; }
 
 .btn-qr:hover .btn-qr-inner,
 .btn-qr:focus .btn-qr-inner {
-  transform: scale(4) !important;
+  transform: scale(8) !important;
   border-color: #FF9A1F !important;
   box-shadow: 0 0 24px rgba(255,154,31,0.25), 0 0 48px rgba(255,154,31,0.1) !important;
   z-index: 100;
