@@ -1018,6 +1018,101 @@ p  { color: var(--text-sec); }
   margin-top: 32px;
 }
 
+/* ─── QR Download Section ────────────────────────────── */
+.qr-download-section {
+  padding: 5rem 0;
+}
+
+.qr-download-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.qr-download-text {
+  flex: 1;
+  max-width: 480px;
+}
+
+.qr-download-text .section-title {
+  margin-bottom: 0.75rem;
+}
+
+.qr-download-text .section-subtitle {
+  margin-bottom: 1.5rem;
+  color: var(--text-sec);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.qr-store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+
+.qr-download-code {
+  flex-shrink: 0;
+}
+
+.qr-download-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color var(--t), box-shadow var(--t);
+}
+
+.qr-download-card:hover {
+  border-color: var(--orange);
+  box-shadow: 0 0 30px var(--orange-dim), 0 0 60px rgba(255, 154, 31, 0.06);
+}
+
+.qr-download-svg {
+  width: 260px;
+  height: 260px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.qr-download-label {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .qr-download-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .qr-download-text {
+    max-width: 100%;
+  }
+
+  .qr-download-text .section-label,
+  .qr-download-text .section-title,
+  .qr-download-text .section-subtitle {
+    text-align: center;
+  }
+
+  .qr-store-btn {
+    margin: 0 auto;
+  }
+
+  .qr-download-svg {
+    width: 220px;
+    height: 220px;
+  }
+}
+
 /* ─── Footer ─────────────────────────────────────────── */
 .footer {
   border-top: 1px solid var(--border-dim);
