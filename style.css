@@ -436,12 +436,62 @@ p  { color: var(--text-sec); line-height: 1.65; }
 }
 
 /* ─── Hero QR Button ────────────────────────────────── */
+@keyframes qrPulseGlow {
+  0%, 100% { box-shadow: 0 0 6px rgba(255,154,31,0.15), 0 0 12px rgba(255,154,31,0.05); }
+  50%      { box-shadow: 0 0 10px rgba(255,154,31,0.3), 0 0 20px rgba(255,154,31,0.1); }
+}
+
+@keyframes qrBorderGlow {
+  0%, 100% { border-color: #FF9A1F; box-shadow: 0 0 24px rgba(255,154,31,0.3), 0 0 48px rgba(255,154,31,0.12); }
+  50%      { border-color: #ffb84d; box-shadow: 0 0 32px rgba(255,154,31,0.45), 0 0 64px rgba(255,154,31,0.18); }
+}
+
 .btn-qr {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
   position: relative;
   z-index: 10;
+}
+
+/* Backdrop overlay on hover */
+.btn-qr::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(13,17,23,0.75);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 90;
+}
+
+.btn-qr:hover::before,
+.btn-qr:focus::before {
+  opacity: 1;
+}
+
+/* "Scan to download" label on hover */
+.btn-qr::after {
+  content: "Scan to download";
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 180px);
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: #FF9A1F;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 101;
+}
+
+.btn-qr:hover::after,
+.btn-qr:focus::after {
+  opacity: 1;
 }
 
 .btn-qr-inner {
@@ -456,10 +506,13 @@ p  { color: var(--text-sec); line-height: 1.65; }
   border: 1px solid var(--border);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-              border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+              border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-radius 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   line-height: 0;
   cursor: pointer;
   transform-origin: center center;
+  animation: qrPulseGlow 2.5s ease-in-out infinite;
 }
 
 .btn-qr-inner svg {
@@ -471,8 +524,9 @@ p  { color: var(--text-sec); line-height: 1.65; }
 .btn-qr:hover .btn-qr-inner,
 .btn-qr:focus .btn-qr-inner {
   transform: scale(8) !important;
-  border-color: #FF9A1F !important;
-  box-shadow: 0 0 24px rgba(255,154,31,0.25), 0 0 48px rgba(255,154,31,0.1) !important;
+  border-radius: 14px;
+  padding: 6px;
+  animation: qrBorderGlow 1.8s ease-in-out infinite !important;
   z-index: 100;
   position: relative;
 }
