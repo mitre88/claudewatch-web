@@ -1,1 +1,4 @@
 .vercel
+.env*.local
+videos_promo/
+node_modules/
